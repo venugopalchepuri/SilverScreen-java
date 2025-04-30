@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | SILVER SCREEN</title>
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="admin-layout">
+        <div class="admin-overlay"></div>
+        
+        <header class="admin-header">
+            <div class="admin-mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <div class="admin-header-title">
+                <h1>Dashboard</h1>
+            </div>
+            
+            <div class="admin-user-menu">
+                <div class="admin-user-info">
+                    <div class="admin-user-name">Admin User</div>
+                    <div class="admin-user-role">Administrator</div>
+                </div>
+                <div class="admin-user-avatar">
+                    A
+                </div>
+            </div>
+        </header>
+        
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar-logo">
+                <a href="dashboard.html">SILVER<span>SCREEN</span></a>
+            </div>
+            
+            <nav class="admin-sidebar-nav">
+                <div class="admin-nav-item">
+                    <a href="dashboard.html" class="active">
+                        <span class="admin-nav-icon"><i class="fas fa-tachometer-alt"></i></span>
+                        Dashboard
+                    </a>
+                </div>
+                <div class="admin-nav-item">
+                    <a href="movies.html">
+                        <span class="admin-nav-icon"><i class="fas fa-film"></i></span>
+                        Movies
+                    </a>
+                </div>
+                <div class="admin-nav-item">
+                    <a href="showtimes.html">
+                        <span class="admin-nav-icon"><i class="fas fa-clock"></i></span>
+                        Showtimes
+                    </a>
+                </div>
+                <div class="admin-nav-item">
+                    <a href="theatres.html">
+                        <span class="admin-nav-icon"><i class="fas fa-building"></i></span>
+                        Theatres
+                    </a>
+                </div>
+                <div class="admin-nav-item">
+                    <a href="bookings.html">
+                        <span class="admin-nav-icon"><i class="fas fa-ticket-alt"></i></span>
+                        Bookings
+                    </a>
+                </div>
+                <div class="admin-nav-item">
+                    <a href="users.html">
+                        <span class="admin-nav-icon"><i class="fas fa-users"></i></span>
+                        Users
+                    </a>
+                </div>
+                <div class="admin-nav-item">
+                    <a href="reports.html">
+                        <span class="admin-nav-icon"><i class="fas fa-chart-bar"></i></span>
+                        Reports
+                    </a>
+                </div>
+                <div class="admin-nav-item">
+                    <a href="settings.html">
+                        <span class="admin-nav-icon"><i class="fas fa-cog"></i></span>
+                        Settings
+                    </a>
+                </div>
+            </nav>
+            
+            <div class="admin-sidebar-footer">
+                <a href="login.html" class="admin-logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </a>
+            </div>
+        </aside>
+        
+        <main class="admin-main">
+            <div class="admin-stats">
+                <div class="admin-stat-card">
+                    <div class="admin-stat-title">Total Bookings</div>
+                    <div class="admin-stat-value">1,256</div>
+                    <div class="admin-stat-change positive">
+                        <i class="fas fa-arrow-up"></i>
+                        12.5% this week
+                    </div>
+                </div>
+                
+                <div class="admin-stat-card">
+                    <div class="admin-stat-title">Revenue</div>
+                    <div class="admin-stat-value">₹2.4M</div>
+                    <div class="admin-stat-change positive">
+                        <i class="fas fa-arrow-up"></i>
+                        8.3% this week
+                    </div>
+                </div>
+                
+                <div class="admin-stat-card">
+                    <div class="admin-stat-title">New Users</div>
+                    <div class="admin-stat-value">358</div>
+                    <div class="admin-stat-change positive">
+                        <i class="fas fa-arrow-up"></i>
+                        5.7% this week
+                    </div>
+                </div>
+                
+                <div class="admin-stat-card">
+                    <div class="admin-stat-title">Occupancy Rate</div>
+                    <div class="admin-stat-value">76%</div>
+                    <div class="admin-stat-change negative">
+                        <i class="fas fa-arrow-down"></i>
+                        2.1% this week
+                    </div>
+                </div>
+            </div>
+            
+            <div class="admin-section">
+                <div class="admin-section-header">
+                    <h2 class="admin-section-title">Recent Bookings</h2>
+                    <a href="bookings.html" class="btn btn-text">View All</a>
+                </div>
+                
+                <div class="admin-data-table-wrapper">
+                    <table class="admin-data-table">
+                        <thead>
+                            <tr>
+                                <th>Booking ID</th>
+                                <th>User</th>
+                                <th>Movie</th>
+                                <th>Theatre</th>
+                                <th>Date & Time</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#BK12345</td>
+                                <td>Rahul Sharma</td>
+                                <td>Avengers: Endgame</td>
+                                <td>SILVER SCREEN Alpha</td>
+                                <td>Today, 6:30 PM</td>
+                                <td>₹650</td>
+                                <td><span class="badge success">Confirmed</span></td>
+                            </tr>
+                            <tr>
+                                <td>#BK12344</td>
+                                <td>Priya Patel</td>
+                                <td>Dune: Part Two</td>
+                                <td>SILVER SCREEN Beta</td>
+                                <td>Today, 7:15 PM</td>
+                                <td>₹450</td>
+                                <td><span class="badge success">Confirmed</span></td>
+                            </tr>
+                            <tr>
+                                <td>#BK12343</td>
+                                <td>Amit Kumar</td>
+                                <td>Inception</td>
+                                <td>SILVER SCREEN Premium</td>
+                                <td>Today, 9:00 PM</td>
+                                <td>₹850</td>
+                                <td><span class="badge warning">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>#BK12342</td>
+                                <td>Sneha Gupta</td>
+                                <td>The Batman</td>
+                                <td>SILVER SCREEN Alpha</td>
+                                <td>Tomorrow, 3:30 PM</td>
+                                <td>₹550</td>
+                                <td><span class="badge success">Confirmed</span></td>
+                            </tr>
+                            <tr>
+                                <td>#BK12341</td>
+                                <td>Raj Malhotra</td>
+                                <td>Interstellar</td>
+                                <td>SILVER SCREEN Premium</td>
+                                <td>Tomorrow, 6:00 PM</td>
+                                <td>₹750</td>
+                                <td><span class="badge error">Cancelled</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="admin-section">
+                <div class="admin-section-header">
+                    <h2 class="admin-section-title">Popular Movies</h2>
+                    <a href="movies.html" class="btn btn-text">View All</a>
+                </div>
+                
+                <div class="admin-data-table-wrapper">
+                    <table class="admin-data-table">
+                        <thead>
+                            <tr>
+                                <th>Movie</th>
+                                <th>Release Date</th>
+                                <th>Duration</th>
+                                <th>Language</th>
+                                <th>Bookings</th>
+                                <th>Revenue</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="admin-movie-title">
+                                        <img src="https://images.pexels.com/photos/8132982/pexels-photo-8132982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avengers" class="admin-movie-poster">
+                                        <div class="admin-movie-info">
+                                            <h4>Avengers: Endgame</h4>
+                                            <div class="admin-movie-meta">Action, Adventure</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Apr 26, 2019</td>
+                                <td>3h 2m</td>
+                                <td>English</td>
+                                <td>2,345</td>
+                                <td>₹4.2M</td>
+                                <td>
+                                    <div class="admin-actions">
+                                        <a href="#" class="admin-action-btn edit"><i class="fas fa-edit"></i></a>
+                                        <a href="#" class="admin-action-btn view"><i class="fas fa-eye"></i></a>
+                                        <a href="#" class="admin-action-btn delete"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="admin-movie-title">
+                                        <img src="https://images.pexels.com/photos/7234263/pexels-photo-7234263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Dune" class="admin-movie-poster">
+                                        <div class="admin-movie-info">
+                                            <h4>Dune: Part Two</h4>
+                                            <div class="admin-movie-meta">Sci-Fi, Adventure</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Mar 1, 2024</td>
+                                <td>2h 46m</td>
+                                <td>English</td>
+                                <td>1,987</td>
+                                <td>₹3.5M</td>
+                                <td>
+                                    <div class="admin-actions">
+                                        <a href="#" class="admin-action-btn edit"><i class="fas fa-edit"></i></a>
+                                        <a href="#" class="admin-action-btn view"><i class="fas fa-eye"></i></a>
+                                        <a href="#" class="admin-action-btn delete"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="admin-movie-title">
+                                        <img src="https://images.pexels.com/photos/3945331/pexels-photo-3945331.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Inception" class="admin-movie-poster">
+                                        <div class="admin-movie-info">
+                                            <h4>Inception</h4>
+                                            <div class="admin-movie-meta">Sci-Fi, Action</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Jul 16, 2010</td>
+                                <td>2h 28m</td>
+                                <td>English</td>
+                                <td>1,543</td>
+                                <td>₹2.8M</td>
+                                <td>
+                                    <div class="admin-actions">
+                                        <a href="#" class="admin-action-btn edit"><i class="fas fa-edit"></i></a>
+                                        <a href="#" class="admin-action-btn view"><i class="fas fa-eye"></i></a>
+                                        <a href="#" class="admin-action-btn delete"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="admin-movie-title">
+                                        <img src="https://images.pexels.com/photos/11873533/pexels-photo-11873533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="The Batman" class="admin-movie-poster">
+                                        <div class="admin-movie-info">
+                                            <h4>The Batman</h4>
+                                            <div class="admin-movie-meta">Action, Crime</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Mar 4, 2022</td>
+                                <td>2h 56m</td>
+                                <td>English</td>
+                                <td>1,329</td>
+                                <td>₹2.4M</td>
+                                <td>
+                                    <div class="admin-actions">
+                                        <a href="#" class="admin-action-btn edit"><i class="fas fa-edit"></i></a>
+                                        <a href="#" class="admin-action-btn view"><i class="fas fa-eye"></i></a>
+                                        <a href="#" class="admin-action-btn delete"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="admin-movie-title">
+                                        <img src="https://images.pexels.com/photos/4840732/pexels-photo-4840732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Interstellar" class="admin-movie-poster">
+                                        <div class="admin-movie-info">
+                                            <h4>Interstellar</h4>
+                                            <div class="admin-movie-meta">Sci-Fi, Drama</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Nov 7, 2014</td>
+                                <td>2h 49m</td>
+                                <td>English</td>
+                                <td>1,156</td>
+                                <td>₹2.1M</td>
+                                <td>
+                                    <div class="admin-actions">
+                                        <a href="#" class="admin-action-btn edit"><i class="fas fa-edit"></i></a>
+                                        <a href="#" class="admin-action-btn view"><i class="fas fa-eye"></i></a>
+                                        <a href="#" class="admin-action-btn delete"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="../../js/main.js"></script>
+    <script src="../../js/admin.js"></script>
+</body>
+</html>

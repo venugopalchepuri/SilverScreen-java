@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies | SILVER SCREEN</title>
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/movies.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="page-header">
+        <nav class="nav-scrolled">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../../index.html">SILVER<span>SCREEN</span></a>
+                </div>
+                <div class="nav-links">
+                    <a href="../../index.html">Home</a>
+                    <a href="movies.html" class="active">Movies</a>
+                    <a href="theatres.html">Theatres</a>
+                    <a href="account.html">My Account</a>
+                </div>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-secondary">Login</a>
+                    <a href="../admin/login.html" class="btn btn-text">Admin</a>
+                </div>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="page-title">
+            <h1>Browse Movies</h1>
+            <p>Find the perfect movie for your next cinema experience</p>
+        </div>
+    </header>
+    
+    <main>
+        <section class="filters">
+            <div class="container">
+                <div class="filter-wrapper">
+                    <div class="filter-group">
+                        <label for="genre">Genre</label>
+                        <select id="genre" class="filter-select">
+                            <option value="all">All Genres</option>
+                            <option value="action">Action</option>
+                            <option value="comedy">Comedy</option>
+                            <option value="drama">Drama</option>
+                            <option value="horror">Horror</option>
+                            <option value="scifi">Sci-Fi</option>
+                            <option value="romance">Romance</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="language">Language</label>
+                        <select id="language" class="filter-select">
+                            <option value="all">All Languages</option>
+                            <option value="english">English</option>
+                            <option value="hindi">Hindi</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="format">Format</label>
+                        <select id="format" class="filter-select">
+                            <option value="all">All Formats</option>
+                            <option value="2d">2D</option>
+                            <option value="3d">3D</option>
+                            <option value="imax">IMAX</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="sortBy">Sort By</label>
+                        <select id="sortBy" class="filter-select">
+                            <option value="popularity">Popularity</option>
+                            <option value="rating">Rating</option>
+                            <option value="name">Name</option>
+                            <option value="release">Release Date</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                    <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="movies-container">
+            <div class="container">
+                <div class="now-showing-section">
+                    <h2>Now Showing</h2>
+                    <div class="movie-grid">
+                        <!-- Movies will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="coming-soon-section">
+                    <h2>Coming Soon</h2>
+                    <div class="movie-grid">
+                        <!-- Coming soon movies will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="../../index.html">SILVER<span>SCREEN</span></a>
+                <p>Premium cinema experience in Greater Noida</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="movies.html">Movies</a></li>
+                        <li><a href="theatres.html">Theatres</a></li>
+                        <li><a href="offers.html">Offers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="../help.html">Help & FAQ</a></li>
+                        <li><a href="../terms.html">Terms of Service</a></li>
+                        <li><a href="../privacy.html">Privacy Policy</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SILVER SCREEN. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../../js/main.js"></script>
+    <script src="../../js/movies.js"></script>
+</body>
+</html>

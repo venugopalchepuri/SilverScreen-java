@@ -1,0 +1,431 @@
+/* Selection Container */
+.selection-container {
+    background: var(--color-primary-800);
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-4);
+}
+
+.selection-step {
+    display: none;
+}
+
+.selection-step.active {
+    display: block;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.selection-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-3);
+}
+
+.selection-number {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--color-accent-500);
+    color: var(--color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.selection-title {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+/* Date Selection */
+.dates {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+}
+
+.date-item {
+    background: var(--color-primary-700);
+    padding: var(--space-2);
+    border-radius: var(--radius-md);
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.date-item:hover {
+    background: var(--color-primary-600);
+}
+
+.date-item.active {
+    background: var(--color-accent-500);
+    border-color: var(--color-accent-600);
+}
+
+.date-item .day {
+    font-size: 0.875rem;
+    color: var(--color-primary-300);
+}
+
+.date-item .date {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 4px 0;
+}
+
+.date-item .month {
+    font-size: 0.875rem;
+    color: var(--color-primary-300);
+}
+
+.date-item.active .day,
+.date-item.active .month {
+    color: var(--color-light);
+}
+
+/* Theatre Selection */
+.theatres {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-3);
+}
+
+.theatre-item {
+    background: var(--color-primary-700);
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.theatre-item:hover {
+    background: var(--color-primary-600);
+}
+
+.theatre-item.active {
+    background: var(--color-accent-500);
+    border-color: var(--color-accent-600);
+}
+
+.theatre-item h4 {
+    margin: 0 0 var(--space-1);
+}
+
+.theatre-item p {
+    color: var(--color-primary-300);
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+.theatre-item.active p {
+    color: var(--color-light);
+}
+
+/* Showtime Selection */
+.showtimes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: var(--space-2);
+}
+
+.showtime-item {
+    background: var(--color-primary-700);
+    padding: var(--space-2);
+    border-radius: var(--radius-md);
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.showtime-item:hover {
+    background: var(--color-primary-600);
+}
+
+.showtime-item.active {
+    background: var(--color-accent-500);
+    border-color: var(--color-accent-600);
+}
+
+/* Selection Navigation */
+.selection-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--space-3);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--color-primary-700);
+}
+
+.selection-nav button {
+    min-width: 120px;
+}
+
+.selection-nav button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Booking Process */
+.booking-process {
+    padding: var(--space-6) 0;
+    min-height: calc(100vh - 200px);
+    background-color: var(--color-primary-900);
+}
+
+/* Booking Steps */
+.booking-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-4);
+    position: relative;
+    background: var(--color-primary-800);
+    padding: var(--space-3);
+    border-radius: var(--radius-lg);
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-primary-700);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-bottom: var(--space-1);
+    transition: var(--transition);
+}
+
+.step.active .step-number {
+    background-color: var(--color-accent-500);
+    color: var(--color-light);
+}
+
+.step.completed .step-number {
+    background-color: var(--color-success-500);
+}
+
+/* Movie Details */
+.movie-details {
+    background: var(--color-primary-800);
+    padding: var(--space-3);
+    border-radius: var(--radius-lg);
+    display: flex;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+}
+
+.movie-poster {
+    width: 200px;
+    height: 300px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.movie-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Seat Layout */
+.seat-selection-container {
+    background: var(--color-primary-800);
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-4);
+}
+
+.screen {
+    background: linear-gradient(to bottom, var(--color-accent-500), transparent);
+    height: 50px;
+    margin-bottom: var(--space-4);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    position: relative;
+}
+
+.screen-text {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-light);
+    font-weight: bold;
+}
+
+.seat-map {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    align-items: center;
+    margin: var(--space-4) 0;
+}
+
+.seat-row {
+    display: flex;
+    gap: var(--space-2);
+    align-items: center;
+}
+
+.row-label {
+    width: 30px;
+    text-align: center;
+    color: var(--color-primary-300);
+    font-weight: bold;
+}
+
+.seat {
+    width: 35px;
+    height: 35px;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-primary-700);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-primary-600);
+}
+
+.seat:hover:not(.reserved) {
+    transform: scale(1.1);
+    background-color: var(--color-primary-600);
+}
+
+.seat.selected {
+    background-color: var(--color-accent-500);
+    border-color: var(--color-accent-600);
+}
+
+.seat.premium {
+    border-color: var(--color-warning-500);
+}
+
+.seat.premium.selected {
+    background-color: var(--color-warning-500);
+    border-color: var(--color-warning-600);
+}
+
+.seat.reserved {
+    background-color: var(--color-primary-600);
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.seat.aisle {
+    width: 20px;
+    background: none;
+    border: none;
+    cursor: default;
+}
+
+/* Seat Info */
+.seat-info {
+    background: var(--color-primary-700);
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    margin-top: var(--space-4);
+}
+
+.seat-types {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-3);
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid var(--color-primary-600);
+}
+
+.seat-type {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.seat-type .seat {
+    width: 25px;
+    height: 25px;
+    cursor: default;
+}
+
+.selection-summary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2);
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-2);
+    background: var(--color-primary-800);
+    border-radius: var(--radius-sm);
+}
+
+.summary-row.total {
+    grid-column: 1 / -1;
+    background: var(--color-accent-500);
+    color: var(--color-light);
+    font-weight: bold;
+}
+
+/* Navigation Buttons */
+.step-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--space-4);
+    gap: var(--space-2);
+}
+
+.step-navigation button {
+    padding: var(--space-2) var(--space-4);
+    font-size: 1rem;
+    min-width: 150px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .movie-details {
+        flex-direction: column;
+    }
+
+    .movie-poster {
+        width: 100%;
+        height: 200px;
+    }
+
+    .seat {
+        width: 30px;
+        height: 30px;
+    }
+
+    .selection-summary {
+        grid-template-columns: 1fr;
+    }
+}

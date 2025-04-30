@@ -1,0 +1,312 @@
+/* Hero Section */
+.hero {
+    height: 100vh;
+    min-height: 600px;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), 
+                url('https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 var(--space-2);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to top, var(--color-dark), transparent);
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 800px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    margin-bottom: var(--space-3);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-4);
+    color: var(--color-primary-200);
+    animation: fadeInUp 0.8s ease 0.2s forwards;
+    opacity: 0;
+}
+
+.hero-content .btn {
+    padding: var(--space-2) var(--space-4);
+    font-size: 1.125rem;
+    animation: fadeInUp 0.8s ease 0.4s forwards;
+    opacity: 0;
+}
+
+/* Now Showing Section */
+.now-showing {
+    padding: var(--space-6) var(--space-2);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--space-3);
+}
+
+.movie-card {
+    background-color: var(--color-primary-800);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.movie-poster {
+    position: relative;
+    height: 375px;
+    overflow: hidden;
+}
+
+.movie-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.movie-card:hover .movie-poster img {
+    transform: scale(1.05);
+}
+
+.movie-info {
+    padding: var(--space-2);
+}
+
+.movie-title {
+    font-weight: 600;
+    margin-bottom: var(--space-1);
+    font-size: 1.1rem;
+}
+
+.movie-meta {
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-primary-300);
+    font-size: 0.875rem;
+    margin-bottom: var(--space-1);
+}
+
+.movie-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.movie-rating i {
+    color: var(--color-warning-500);
+}
+
+.movie-book-btn {
+    margin-top: var(--space-2);
+    width: 100%;
+}
+
+/* Features Section */
+.features {
+    padding: var(--space-6) var(--space-2);
+    background-color: var(--color-primary-900);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: var(--space-4);
+}
+
+.feature {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    text-align: center;
+    padding: var(--space-3);
+    transition: var(--transition);
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-2);
+    color: var(--color-accent-500);
+}
+
+.feature h3 {
+    margin-bottom: var(--space-1);
+}
+
+.feature p {
+    color: var(--color-primary-300);
+}
+
+/* Theatres Section */
+.theatres {
+    padding: var(--space-6) var(--space-2);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.theatre-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-4);
+}
+
+.theatre-card {
+    background-color: var(--color-primary-800);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.theatre-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.theatre-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: var(--transition);
+}
+
+.theatre-card:hover .theatre-image {
+    transform: scale(1.05);
+}
+
+.theatre-details {
+    padding: var(--space-3);
+}
+
+.theatre-details h3 {
+    margin-bottom: var(--space-1);
+}
+
+.theatre-details p {
+    color: var(--color-primary-300);
+    margin-bottom: var(--space-2);
+}
+
+/* App Promo Section */
+.app-promo {
+    background: linear-gradient(to right, var(--color-accent-900), var(--color-accent-700));
+    padding: var(--space-6) var(--space-2);
+    text-align: center;
+}
+
+.app-promo-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.app-promo h2 {
+    margin-bottom: var(--space-2);
+}
+
+.app-promo p {
+    margin-bottom: var(--space-4);
+    color: var(--color-primary-100);
+}
+
+.app-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-3);
+}
+
+.app-btn {
+    max-width: 180px;
+    transition: var(--transition);
+}
+
+.app-btn:hover {
+    transform: translateY(-5px);
+}
+
+.app-btn img {
+    width: 100%;
+    height: auto;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .theatre-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .movie-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .app-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        min-height: 500px;
+    }
+    
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature {
+        max-width: 100%;
+    }
+    
+    .theatre-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .movie-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+    
+    .movie-poster {
+        height: 240px;
+    }
+}
